@@ -1,5 +1,4 @@
 <?php
-header ('Location:http://kik.com/');
 $address = $_SERVER['REMOTE_ADDR'];
 $referer = $_SERVER['HTTP_REFERER'];
 $browser = $_SERVER['HTTP_USER_AGENT'];
