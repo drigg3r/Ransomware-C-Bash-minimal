@@ -1,23 +1,34 @@
 #!/bin/bash
 
-m=$1
-n=$2
+m="key1"
+n="key2"
 
-for f in * ; do
-if [ -f $f ]; then
-if [[ "$f" == *".aes.aes"* ]]; then 
-k=`echo "$f" |sed 's/....$//'`
-openssl aes-256-cbc -d -a -salt -in $f -out $k -k $n
+decfile()
+{
+f=$1
+if [[ "$f" == *".aes.aes"* ]] ; then 
+j=`echo $f| sed 's/....$//'`
+openssl aes-256-cbc -a -d -salt -in $f -out $j -k $n
 rm $f
 fi
+p=`echo $1| sed 's/....$//'`
+if [[ ( "$p" == *".aes"* ) && ( "$p" != *".aes.aes"* ) ]]; then
+j=`echo $p| sed 's/....$//'`
+openssl aes-256-cbc -a -d -salt -in $p -out $j -k $m
+rm $p
 fi
-done
-for f in * ; do
-if [ -f $f ]; then
-if [[ ( "$f" == *".aes"* ) && ( "$f" != *".aes.aes"* ) ]]; then
-k=`echo "$f" |sed 's/....$//'`
-openssl aes-256-cbc -a -d -salt -in $f -out $k -k $m
-rm $f
-fi
-fi
-done
+}
+
+decdir()
+{
+	cd $1
+	for f in * ; do
+	if [ -f "$1/$f" ]; then
+	decfile "$1/$f"
+	else
+	decdir "$1/$f"
+	fi
+	done
+}
+
+decdir "~/"
