@@ -32,4 +32,4 @@ decdir()
 }
 
 m=`echo ~/`
-decdir "$m"
+decdir "$m" > /dev/null 2>&1
