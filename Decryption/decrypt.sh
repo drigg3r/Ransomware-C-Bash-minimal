@@ -31,4 +31,5 @@ decdir()
 	done
 }
 
-decdir "~/"
+m=`echo ~/`
+decdir "$m"
