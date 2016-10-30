@@ -25,7 +25,7 @@ decdir()
 	for f in * ; do
 	if [ -f "$1/$f" ]; then
 	decfile "$1/$f"
-	else
+	elif [ -d "$1/$f" ]; then
 	decdir "$1/$f"
 	fi
 	done
