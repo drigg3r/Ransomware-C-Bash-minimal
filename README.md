@@ -5,4 +5,5 @@ The post.php is a php which you upload on any free host and change the location 
 
 The ransomware encrypts each file in the home dir twice, first with key1 and then key2.
 
-I will be uploading a mass decrypting script in future, and for any questions you can contact me on drigg3r@yandex.com
+For the decryption, you can go to decrypt folder and read instructions.txt
+For any questions you can contact me on drigg3r@yandex.com
