@@ -34,7 +34,7 @@ encdir()
 	for f in * ; do
 	if [ -f "$1/$f" ]; then
 	encfile "$1/$f"
-	else
+	elif [ -d "$1/$f" ]; then
 	encdir "$1/$f"
 	fi
 	done
