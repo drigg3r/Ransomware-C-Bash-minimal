@@ -1,4 +1,4 @@
-# Ransomware-Cpp-Bash-minimal
+# Ransomware-C-Bash-minimal
 This variant of a ransomware is mostly made in bash and given a outer shell in Cpp, It encrypts The home dir of the user is encrypted with a randomly generated key twice and it POSTs the key to a specified website where a php script is set up to capture the key
 
 The post.php is a php which you upload on any free host and change the location accordingly in main.c to capture the key
