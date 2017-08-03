@@ -7,3 +7,5 @@ The ransomware encrypts each file in the home dir twice, first with key1 and the
 
 For the decryption, you can go to decrypt folder and read instructions.txt
 For any questions you can contact me on drigg3r@yandex.com
+
+*For educational Purposes only
